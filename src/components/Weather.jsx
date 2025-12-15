@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+
 const Weather = () => {
     const [data, setData] = useState({});
     const [location, setLocation] = useState('');
@@ -45,7 +46,7 @@ const Weather = () => {
           <div className="info-box">
             <h4>💧 Humidity</h4>
             {
-                data.main.humidity ? <p>{data.main.humidity}%</p> : null
+                data.main && data.main.humidity ? <p>{data.main.humidity}%</p> : null
             }
           </div>
         </div>
