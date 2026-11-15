@@ -1,12 +1,35 @@
-# React + Vite
+# Skycast · Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite weather app with a glassmorphism UI, animated weather skies, and hand-drawn SVG icons.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Current conditions** — temperature, feels-like, high/low, condition, live local date & time for the searched city
+- **Hourly forecast** — next 24 hours with temperature and chance of precipitation
+- **5-day forecast** — daily high/low with temperature range bars
+- **Details panel** — feels like, humidity, wind (speed + direction), pressure, visibility, cloud cover
+- **Sun times** — sunrise, sunset and total daylight duration
+- **Air quality** — AQI index with PM2.5, PM10, O₃ and NO₂ readings
+- **°C / °F toggle** — persisted across visits, converts instantly
+- **Geolocation** — one-tap "use my location"
+- **Recent searches** — last 5 cities saved in localStorage; reopens your last city on launch
+- **Dynamic backgrounds** — the whole page becomes the weather: sun glow, drifting clouds, rain, snow, stars at night, lightning flashes, fog banks (all CSS, respects `prefers-reduced-motion`)
+- Loading skeletons and friendly error states
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Building
+
+```bash
+npm run build
+npm run preview
+```
+
+## Data source
+
+Weather data comes from the free [OpenWeatherMap](https://openweathermap.org/api) API (current weather, 5-day/3-hour forecast and air pollution endpoints). The API key lives in `src/components/Weather.jsx` (`API_KEY`) — swap in your own if needed and keep it out of public repos.
