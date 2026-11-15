@@ -5,7 +5,7 @@ import './weather.css';
 
 const API_KEY = '78b80c7f76b0e73026216dfe61a5ccb9';
 const API_BASE = 'https://api.openweathermap.org/data/2.5';
-const DEFAULT_CITY = 'New York';
+const DEFAULT_CITY = 'Kathmandu,NP';
 
 const STORAGE = {
   unit: 'skycast:unit',
